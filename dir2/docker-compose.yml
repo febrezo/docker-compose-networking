@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  server2:
+    build: .
+    image: image2
+    container_name: "container2"
+    command: bash -c "python server.py"
+    ports:
+      - "15002:5002"
+    networks:
+      - dir1_some-net
+networks:
+  dir1_some-net:
+    external: true

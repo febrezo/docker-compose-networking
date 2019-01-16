@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  server1:
+    build: .
+    image: image1
+    container_name: "container1"
+    command: bash -c "python server.py"
+    ports:
+      - "15001:5001"
+    networks:
+      - some-net
+networks:
+  some-net:
+    driver: bridge
