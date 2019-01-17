@@ -17,6 +17,44 @@ Each server contains the following files:
 - `Dockerfile`. A file that simply prepares the Docker image.
 - `server.py`. A simple Flask web server that shows the number of the server. It runs it locally in port `500x` where `x` is the number of the server.
 
+Requirements
+------------
+
+To deploy this PoC, check that you have docker and docker-compose installed in your computer.
+
+```
+$ docker --version
+Docker version 18.09.0, build 4d60db4
+$ docker-compose --version
+docker-compose version 1.23.1, build b02f1306
+```
+
+Once done, clone the repository using git clone and cd into it.
+
+```
+$ git clone https://github.com/febrezo/docker-compose-networking
+$ cd docker-compose-networking
+$ tree
+.
+├── AUTHORS.md
+├── COPYING
+├── dir1
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   └── server.py
+├── dir2
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   └── server.py
+├── dir3
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   └── server.py
+└── README.md
+
+3 directories, 12 files
+```
+
 Deploying the Environment
 -------------------------
 
